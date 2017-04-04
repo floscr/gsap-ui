@@ -8,11 +8,9 @@ let root
 function init () {
   const App = require('./components/app').default
   root = render((
-    <div id='outer'>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <App />
+    </Provider>
   ), document.body, root)
 }
 
