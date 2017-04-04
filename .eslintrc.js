@@ -16,6 +16,8 @@ module.exports = {
   ],
   globals: { },
   rules: {
-    'no-unused-vars': [1, { varsIgnorePattern: 'h' }]
+    'no-unused-vars': [1, { varsIgnorePattern: 'h' }],
+    'padded-blocks': 1,
+    'comma-dangle': 0,
   }
 }

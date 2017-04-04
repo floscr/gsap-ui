@@ -1,24 +1,16 @@
 import { h, Component } from 'preact'
-import { Router } from 'preact-router'
+import { connect } from 'preact-redux'
+import { bindActions } from '../util'
+import reduce from '../reducers'
+import * as actions from '../actions'
 
-import Header from './header'
-import Home from './home'
-import Profile from './profile'
+@connect(reduce, bindActions(actions))
 
 export default class App extends Component {
-  handleRoute = e => {
-    this.currentUrl = e.url
-  };
-
   render () {
     return (
       <div id='app'>
-        <Header />
-        <Router onChange={this.handleRoute}>
-          <Home path='/' />
-          <Profile path='/profile/' user='me' />
-          <Profile path='/profile/:user' />
-        </Router>
+        Hello World
       </div>
     )
   }
